@@ -1,0 +1,18 @@
+// ==UserScript==
+// @name         青年大摸鱼
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  快速跳过视频，节省时间。
+// @author       a_handsome_guy
+// @match        http://h5.cyol.com/*
+// @grant        none
+// @run-at document-idle
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    var sb = document.getElementById("Bvideo");
+    sb.addEventListener("timeupdate",function(){
+        sb.currentTime=10000;
+    })
+})();
